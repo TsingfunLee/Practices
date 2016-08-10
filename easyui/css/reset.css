@@ -1,0 +1,26 @@
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, /* structural elements 结构元素 */
+ul, ol, li, /* list elements 列表元素 */
+button, input, textarea, /* form elements 表单元素 */
+table,thead,tbody,th, td /* table elements 表格元素 */
+header,article,section,aside  /* 语义化元素 */
+{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+/* 设置默认字体 */
+body,
+button, input, select, textarea { /* for ie */
+    /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+    font: 16px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+}
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+
+/* 重置文本格式元素 */
+a { text-decoration: none; }
+
+body{
+	overflow: hidden;
+}

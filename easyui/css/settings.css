@@ -1,0 +1,12 @@
+table a {
+	color: #6B9CDE;
+	text-decoration: underline;
+}
+
+table a:hover {
+	cursor: pointer;
+}
+
+table input{
+	display: none;
+}

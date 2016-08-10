@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>弹出窗口</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<input type="button" value="终端设置" class="button hcenter"
+		onClick="openWindow()">
+	<div id="popWindow" class="slidein">
+		<div class="title">
+			<h4>终端设置</h4>
+		</div>
+
+		<div class="tab">
+			<h4>常规设置</h4>
+			<h4 class="inactive">输出设置</h4>
+		</div>
+
+		<div class="normal settings">
+			<form class="ns">
+				<p id="num">
+					编号 <input type="text" value="例：0000AAAA"
+						onfocus="if(value=='例：0000AAAA'){value='';}style.color='#000000';"
+						onblur="if(value==''){value='例：0000AAAA';style.color='#cccccc';}"
+						id="no-input"> <input type="button" value="获取"
+						class="submit" onclick="getNo()">
+				<p>
+					所属分组 <select id="group">
+						<optgroup label="group1">
+							<option>分组1</option>
+							<option>分组2</option>
+						</optgroup>
+						<optgroup label="group2">
+							<option>分组3</option>
+							<option>分组4</option>
+						</optgroup>
+					</select>
+				</p>
+			</form>
+		</div>
+
+		<div class="output settings">
+			<p>
+				<input type="checkbox" id="enabled-chb" checked="true"
+					onclick="enabledInputSettings()">启用输出设置
+			</p>
+			<p>
+				<input type="radio" name="screenmode" value="landscape"
+					checked="true">横屏 <input type="radio" name="screenmode"
+					value="portrait">竖屏
+			</p>
+			<p>
+				输出类型<select id="output-type">
+					<option>类型1</option>
+					<option>类型2</option>
+				</select>
+			</p>
+		</div>
+
+		<div class="btm-bt">
+			<input type="button" value="保存" id="save-button" onclick="save()">
+			<input type="button" value="取消" onClick="closeWindow()">
+		</div>
+	</div>
+	<div id="mask" onClick="closeWindow()"></div>
+	<script src="main.js"></script>
+</body>
+</html>

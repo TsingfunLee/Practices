@@ -1,0 +1,29 @@
+/*
+Theme Name: Test
+Author: Test
+Description: Test
+Version: 1.0
+License: GNU General Public License v2 or later
+Tags: test
+*/
+/*
+.fa-thumb-tack {
+	position: relative;
+}
+
+.fa-thumb-tack:before {
+	content: "\f08d";
+	font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    /*--adjust as necessary--*/
+	/*
+    color: #000;
+    font-size: 18px;
+    padding-right: 0.5em;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+**/

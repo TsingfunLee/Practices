@@ -36,7 +36,7 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <?php wp_nav_menu(array('menu_class' => 'nav navbar-nav', 'menu_id' => '', 'container' => '', 'container_class' => '', 'container_id' => '')); ?>
+                    <?php wp_nav_menu( array('menu_class' => 'nav navbar-nav', 'menu_id' => '' ) ); ?>
                     <div class="nav navbar-nav navbar-right">
                         <i class="fa fa-thumb-tack"></i>
                         <input type="checkbox">

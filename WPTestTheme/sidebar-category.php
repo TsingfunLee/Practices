@@ -17,7 +17,7 @@
         </div>
         <!-- Hot Tags -->
         <div role="tabpanel" class="tab-pane fade" id="tag">
-
+            <?php wp_tag_cloud( 'smallest=8&largest=28&number=50' ); ?>
         </div>
         <!-- Friend Links -->
         <div role="tabpanel" class="tab-pane fade" id="link">

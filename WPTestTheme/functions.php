@@ -116,11 +116,12 @@ function test_get_comment_link($com)
  * Recommend Posts By The Tags
  */
 function test_get_recommend_posts(){
-    $tags = get_the_tags(); //标签名
+    $tags = get_the_tags(); 
     $tag = $tags[0]->name;
     $args=array(
-        'tag' => $tag,
+      'tag' => $tag,
       'showposts'=>3,
+	  'caller_get_posts'=>1
    );
 
    $my_query = new WP_Query($args);

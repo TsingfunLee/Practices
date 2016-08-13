@@ -12,7 +12,7 @@
         <ul class="list-group">
             <li class="list-group-item">
                 <span class="badge"><?php echo test_get_post_views($post->ID); ?></span>
-                <?php echo $post->post_title; ?>
+                <a href="<?php echo get_permalink($post->ID); ?>"><?php echo $post->post_title; ?></a>
             </li>
         </ul>
         <?php endforeach; ?>

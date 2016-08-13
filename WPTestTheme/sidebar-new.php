@@ -1,6 +1,8 @@
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h5 class="panel-title">最新文章</h5>
+        <h5 class="panel-title"><i class="fa fa-refresh"></i>最新文章</h5>
+        <i class="fa fa-chevron-circle-up"></i>
+        <i class="fa fa-times-circle"></i>
     </div>
     <div class="panel-body">
         <ul class="list-group">

@@ -112,5 +112,19 @@ function test_get_comment_link($com)
     echo $com_link;
 }
 
+/**
+ * Recommend Posts By The Tags
+ */
+function test_get_recommend_posts(){
+    $tags = get_the_tags(); //标签名
+    $tag = $tags[0]->name;
+    $args=array(
+        'tag' => $tag,
+      'showposts'=>3,
+   );
+
+   $my_query = new WP_Query($args);
+    return $my_query;
+}
 ?>
 

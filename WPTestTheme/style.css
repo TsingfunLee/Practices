@@ -1,29 +1,557 @@
-/*
-Theme Name: Test
-Author: Test
-Description: Test
-Version: 1.0
-License: GNU General Public License v2 or later
-Tags: test
-*/
-/*
-.fa-thumb-tack {
-	position: relative;
-}
+﻿        .div1{
+            width: 100px;
+            height: 2000px;
+            background-color: #66afe9;
+        }
+        a,a:hover{
+            text-decoration: none;
+        }
+        h2 a{
+            color:#3d4450 ;
+            font-family: "微软雅黑";
+        }
+        h2 a:hover,.btn-before,.btn-before:hover,.btn-after,.btn-after:hover{
+            color:#d9534f ;
+        }
+        body{
+            padding-top: 70px;
+            background:url("img/bg.jpg") repeat;
+        }
+	
+        .myright i:hover{
+            cursor:pointer;
+        }
+        .myright{
+            padding-right: 30px;
+            padding-left: 20px;
+        }
+        .mywidth{
+            border-radius: 15px;
+            margin-left: 80px;
+            margin-right: 50px;
+            padding-top: 20px;
+            padding-left: 30px;
+            background-color: white;
+            border: 2px solid #dadada;
+            position: relative;
+        }
+        .youlove,.youargue,.youwel,#submit {
+            border-radius: 5px;
+            margin: 20px 50px 20px 80px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+        .argue-gif{
+            margin: 10px 50px 5px 80px;
+        }
+        .youwel{
+            font-size: 14px;
+        }
+        .youtext{
+            border-radius: 5px;
+            margin: 20px 50px 20px 80px;
+        }
+        #submit {
+            border:2px solid #d9534f;
+            color: #d9534f;
+            background:none;
+            width: 85%;
+        }
+        #submit:hover{
+            background-color:#d9534f ;
+            color: white;
+        }
+        .youlove{
+            background-color: #F2DEDE;
+            color: #B94A48;
+        }
+        .youargue,.youwel{
+            background-color: #D9EDF7;
+            color: #3A87AD;
+            border:1px solid #BCE8F1;
+        }
+        .arguearea textarea{
+            width: 85%;
+            height:200px;
+            border: 2px solid #C1C1C1;
+            border-radius: 8px;
+            padding: 10px;
+            background: none;
+        }
+        .youmes{
+            position: relative;
+        }
+        .youmes .mes-sing{
+            border: 3px solid #D9534F;
+            height: 50px;
+            padding: 0;
+            margin: 10px 10px;
+        }
+        .youmes .mes-span{
+            padding:15px;
+            background-color: #D9534F;
+            color: white;
+            position: absolute;
+            top:10px;
+            left: 0;
+        }
+        .youmes .col-md-4 input{
+            float: left;
+            padding-left: 50px;
+            padding-top: 5px;
+            padding-right: -10px;
+            background: none;
+            border: none !important;
+            overflow: scroll;
+            width: 100%;
+        }
+        .you-love-art,.youmes,.about-me{
+            margin: 20px 50px 20px 80px;
+        }
+        .you-love-art .art-single{
+            background-color: white;
+            border-radius: 5px;
+            padding: 8px;
+            border: 1px solid #dadada;
+            position: relative;
+            height: 210px;
+        }
+        .art-single h2{
+            color: #d9534f;
+        }
+        .art-single a{
+            margin-top: 12px;
+            font-size: 14px;
+            color: #d9534f;
+        }
+        .art-single p{
+            font-size: 12px;
+            line-height: 20px;
+            color: black;
+            margin-bottom: 50px;
+        }
+        .art-single .reading-all{
+            border-radius: 5px;
+            width: 80px;
+            height: 30px;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            background-color:#d9534f ;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            text-decoration: none;
+        }
+        footer{
+            height: 120px;
+            background-color: #3d4450;
+        }
+        footer a{
+            text-decoration: none;
+        }
+        footer a:hover{
+            text-decoration: none;
+            color: white;
+        }
+        footer p,footer a{
+            color: white;;
+            padding-top: 30px;
+            line-height: 22px;
+            text-align: center;
+            font-size: 13px;
+        }
+        #static{
+            position: absolute;
+            top:17px;
+            right: 60px;
+            width: 22px;
+            height: 22px;
+            overflow: hidden;
+            background: url("img/red.png")no-repeat 0 0;
+        }
+		.header-tack{
+			 position: absolute;
+            top:17px;
+            right: 80px;
+			color:white;
+			width:22px;
+			height:22px;
+	
+		}
+        .list-group .active,.list-group .active:hover,.mynav-color{
+            border-color: #3d4450;
+            background-color:#3d4450 ;
+        }
+        .mynav-color{
+            height: 50px;
+            margin-top: -70px;
+            background-color:#3d4450 ;
+            border-radius: 0px;
+            border: 1px solid #3d4450;
+        }
+        .badge{
+            background-color:#d9534f ;
+        }
+        .myfont-white{
+            color: white;
+        }
+        .myfont-red{
+            color: #d9534f !important;
+        }
+        .col-md-8{
+            padding-top: 17px;
+            border-color: #1b6d85;
+        }
+        .mynoborder{
+            background-color: #1b6d85;
+        }
+        .mylabel{
+            margin:10px;
+            line-height: 30px;
+        }
+        .c-share{
+            margin-top: -5px;
+            line-height: 40px;
+        }
+        .mylabel,.loading-more{
+            background-color:#3d4450 ;
+            border: 1px solid #3d4450;
+        }
+        .mylabel:hover,.loading-more:hover{
+            background-color:#d9534f ;
+            border: 1px solid #d9534f ;
+        }
+        .mycenter{
+            text-align: center;
+            margin-top: 20px;
+        }
+        .mycontent{
+            background-color:#EEEEEE ;
+            border-radius: 5px;
+            margin-top: 30px;
+            margin-right: 30px;
+            padding:15px 10px;
+            overflow: hidden;
+            word-break :break-all;
+        }
+        .art-single p{
+            word-break :break-all;
+        }
+        .my-copyright{
+            background-color:#DFF0D8 ;
+            border-radius: 5px;
+            margin-top: 30px;
+            margin-right: 30px;
+            padding:22px 10px 10px 10px;
+        }
+        .my-copyright a{
+            word-break: break-all;
+        }
+        .my-copyright .font-right{
+            line-height: 20px;
+        }
+        .section-p p{
+            font-size: 14px !important;
+            font-weight: 400;
+            font-family: "Microsoft Yahei";
+            line-height: 22px;
+        }
+        .btn-red{
+            background-color: #D9534F;
+            border-color: #D9534F;
+        }
+        .btn-red:hover{
+            background-color: #D2322D;
+            border-color: #D2322D;
+        }
+        .myhui-right{
+            margin-right: 30px;
+            float: right;
+        }
+        .loading-more{
+            width: 83%;
+            margin: 0 80px;
+            padding-left: 0;
+            padding-right: 0;
+            display: block;
+            vertical-align:middle
+        }
+        .divdate{
+            width: 70px;
+            height: 70px;
+            text-align: center;
+            line-height: 6px;
+            background-color: #D9534F;
+            border-radius: 35px;
+            display: block;
+            position: absolute;
+            left: -27px;
+            top: -27px;
+            color: white;
+        }
+        .mymouth{
+            padding-top:20px ;
+            font-size: 15px !important;
+        }
+        .myday{
+            padding-top:0px !important;
+            font-size: 32px !important;
+        }
+        .btn-before ,.btn-after {
+            background-color: white;
+            border-color: #DDDDDD;
+            font-color: #D9534F !important;
+        }
+        .btn-before *,.btn-after *{
+            color:#D9534F !important;
+        }
+        .btn-after{
+            float: right;
+            margin-right: 30px;
+        }
+        .btn-after span{
+            font-color: #D9534F !important;
+        }
+        .btn-before:hover,.btn-after:hover{
+            background-color: #EEEEEE;
+            border-color: #DDDDDD;
+        }
+        .font-right ,.my-copyright a:hover{
+            color: #468847;
+            font-size:14px !important;
+            font-family: "微软雅黑" !important;
+            font-weight: 500 !important;
+        }
+        .font-right{
+            line-height: 12px;
+        }
+        .my-copyright a{
+            color: #6cb85c;
+            font-size:14px !important;
+            font-family: "微软雅黑";
+            font-weight: 500;
+        }
+        .c-share{
+            float: right;
+            margin-right: 30px;
+        }
+        .sing-ad{
+            margin-left: 80px;
+        }
+        .sing-ad img{
+            width:90%;
+            height:90%;
+        }
+        .my-article-color{
+            position: relative;
+        }
+        .myhiden{
+            position: absolute;
+            right: 40px;
+        }
+        .argue-all{
+            height: 70px;
+            position: relative;
+        }
+        .argue-icon{
+            float: left;
+            width: 40px;
+            border-radius: 20px;
+            margin-top: 6px;
+        }
+        .argue-con{
+            background-color: #EEEEEE;
+            position: absolute;
+            left:50px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            width: 75%;
+            margin: 5px 10px;
+            color: #666666;
 
-.fa-thumb-tack:before {
-	content: "\f08d";
-	font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
-    /*--adjust as necessary--*/
-	/*
-    color: #000;
-    font-size: 18px;
-    padding-right: 0.5em;
-    position: absolute;
-    top: 10px;
-    left: 0;
-}
-**/
+            /*只显示一行*/
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .argue-con a{
+            color: #666666;
+        }
+        .argue-con a:hover {
+            color: #b94a48;
+        }
+        #sidebar-adcon{
+            height: 240px;
+            background-color: white;
+            border: 2px solid #EEEEEE;
+            border-radius: 5px;
+        }
+        #sidebar-adcon .ad-one{
+            float: left;
+            padding: 10px;
+            width: 50%;
+            line-height: 22px;
+        }
+        #sidebar-adcon .ad-one p{
+            padding-top: 10px;
+        }
+        .about-me{
+            border-radius: 15px;
+            border: 1px solid #bce8f1;
+            background-color: #d9edf7;
+            color: #3a87ad;
+            font-family: '微软雅黑';
+            padding:15px;
+        }
+        .about-me h2{
+            font-size: 26px;
+            font-weight: 700;
+        }
+        .about-me h3,.about-me span{
+            font-size: 17px;
+            font-weight: 600;
+        }
+        #header-btn{
+            color: white;
+            list-style: none;
+        }
+        .sidebar-cate{
+            margin-right: 30px;
+            margin-left: 20px;
+            border: 1px solid #DDDDDD;
+        }
+        .cate-head .panel-heading{
+            background-color: white;
+            border-bottom: 1px solid #DDDDDD;
+        }
+        .li-panel li{
+            list-style: none;
+            padding: 5px 0px;
+            color: black;
+        }
+        .conment li{
+            border: 1px solid #DDDDDD;
+            background-color: white;
+            list-style: none;
+            margin: 20px;
+            padding: 10px;
+            line-height: 22px;
+        }
+        .catemain-color * {
+            color:#2c3340 !important;
+        }
+        .pane-color ul li a{
+            color:#2c3340 !important;
+        }
+        .changeco .active a{
+            background-color: #d9534f !important;
+            color:white !important;
+        }
+        .changeco li a{
+            color: #d9534f !important;
+        }
+        .menu-about *{
+            list-style-type:none;
+            color:white;
+            font-weight:700;
+            background-color: #3D4450;
+            text-align:center;
+            padding-left:6px;
+            padding-right:6px;
+            padding-top:5px;
+            padding-bottom:1px;
+        }
+        .menu-about *:hover{
+            color:white;
+            background-color:#2c3340;
+        }
+        @media (max-width: 991px) {
+            .youmes .mes-span {
+                top: 0;
+            }
+        }
+        @media (max-width: 780px){
+            .myhui-right{
+                width: 80%;
+                margin-top: -15px;
+                align: center;
+            }
+            .divdate,.sing-ad{
+                display: none;
+            }
+            .btn-after{
+                margin-right:0px;
+            }
+            .mywidth{
+                margin-top: 90px;
+                margin: 10px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .my-copyright{
+                margin:20px 5px;
+            }
+            .mycontent{
+                margin-right: 0px;
+                padding:15px 10px;
+            }
+            .static-btn,.myad-control,.header-tack{
+                display:none;
+            }
+            .loading-more {
+                width: 80%;
+                margin: 0 30px;
+            }
+            .myright{
+                margin-left: 10px;
+            }
+            .you-love-art{
+                margin: 5px;
+            }
+            .youlove,.youargue,.youwel,#submit{
+                margin: 10px;
+            }
+            .youmes ,.argue-gif,.youtext{
+                margin: 10px;
+            }
+         
+            .argue-con {
+                width: 60%;
+            }
+            .header-about{
+                border-radius: 20px;
+                margin-top: -10px;
+            }
+        }
+        #gotoTop{
+            display:none;
+            width: 46px;
+            height: 46px;
+            color: white;
+            border: 2px solid white;
+            position:fixed;
+            top:93%;
+            left:50%;
+            cursor:pointer;
+            margin-top:-50px;
+            margin-left:520px;
+            border-radius: 25px;
+            /*line-height: 36px;*/
+            background:#3d4450;}
+        #gotoTop i{
+            position: absolute;
+            top: 6px;
+            left: 8px;
+        }
+        /*用CSS表达式(expression)来实现ie6下position:fixed效果*/
+        #gotoTop{
+            _position:absolute;
+            _top:expression(documentElement.scrollTop + documentElement.clientHeight * 3/4 + "px")}
+        /*鼠标进入的反馈效果*/
+        #gotoTop.hover{
+            border: 2px solid #d9534f;
+            color:#d9534f;
+            text-decoration:none;
+        }

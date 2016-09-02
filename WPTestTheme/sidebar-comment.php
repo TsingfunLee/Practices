@@ -1,20 +1,25 @@
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h5 class="panel-title"><i class="fa fa-fire"></i>最新评论</h5>
-        <i class="fa fa-chevron-circle-up"></i>
-        <i class="fa fa-times-circle"></i>
-    </div>
-    <div class="panel-body">
+<ul class="alert list-group myright">
+            <a class="list-group-item active my-article-color">
+                        <i class="icon icon-comments"></i> 最新评论
+                        <span id="arghide"><i class="icon-angle-down icon-large myhiden" ></i></span>
+                        <button class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+            </a>
+           
         <?php
         $comments= get_comments();
         foreach ($comments as $com):
         ?>
-        <ul class="list-group">
-            <li class="list-group-item">
-                <span><?php echo get_avatar($com->comment_author_email,32); ?></span>
-                <a href="<?php test_get_comment_link($com); ?>"><?php echo $com->comment_content; ?></a>
+        <div id="argcon">
+            <li class="list-group-item argue-all">
+                <span class="argue-icon"><?php echo get_avatar($com->comment_author_email,32); ?></span>
+                <div class="argue-con">
+				<a href="<?php test_get_comment_link($com); ?>">
+				<?php echo $com->comment_content; ?>
+				</a>
+				</div>
             </li>
             <?php endforeach; ?>
-        </ul>
+        
     </div>
-</div>
+</ul>

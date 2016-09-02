@@ -7,8 +7,8 @@
 get_header();?>
 
 <div class="row">
-	<div class="col-md-8">
-		<div>
+	<div class="col-md-8  ">
+		<div class='about-me'>
 			<h2>About Me</h2>
 			<p>一个普通的程序员</p>
 			<h3>联系方式:</h3>
@@ -17,6 +17,7 @@ get_header();?>
 
 		<?php get_template_part('comments');?>
 	</div>
+	
 	<?php get_sidebar(); ?>
 </div>
 

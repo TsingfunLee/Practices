@@ -1,7 +1,6 @@
 <div class="col-md-12">
 
     <div class="youargue">
-               
         <?php
         $count = get_comments_number();
         ?>
@@ -10,7 +9,7 @@
     </div>
 
     <?php if (have_comments()) : ?>
-        <ul class='conment'>
+        <ul class='comment'>
 		
             <?php
             wp_list_comments(array(

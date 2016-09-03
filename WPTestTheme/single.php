@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
     <div class="col-md-8" role="main">
-        <article>
+
             <!-- Content -->
             <?php while (have_posts()) :
             the_post(); ?>

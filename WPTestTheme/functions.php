@@ -60,9 +60,9 @@ function test_site_views()
 /**
  * Get Month And Day Of Date
  */
-function test_get_mydate()
+function test_get_date()
 {
-    $date = the_date('m-d', '', '', FALSE);
+    $date = get_the_date('m-d', '', '', FALSE);
     $dateArray = explode('-', $date);
     if ($dateArray[0] < 10) {
         $dateArray[0] = substr($dateArray[0], 1);
@@ -73,12 +73,28 @@ function test_get_mydate()
 /**
  * Get Part Of The Content
  */
-function test_get_content($id, $words = 300)
-{
-    $content = get_post($id)->post_content;
-    $content = substr($content, 0, $words);
-    return $content;
-}
+//function excerpt($limit) {
+//    $excerpt = explode(' ', get_the_excerpt(), $limit);
+//    if (count($excerpt)>=$limit) {
+//        array_pop($excerpt);
+//        $excerpt = implode(" ",$excerpt).'...';
+//    } else {
+//        $excerpt = implode(" ",$excerpt);
+//    }
+//    $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+//    return $excerpt;
+//}
+//function test_get_preview($content)
+//{
+//    // Take the existing content and return a subset of it
+//    return substr($content, 0, 300);
+//}
+//function test_get_content($id, $words = 300)
+//{
+//    $content = the_content('...',true);
+//    $content = substr($content, 0, $words);
+//    return $content;
+//}
 
 /**
  * Get The Number Of Posts

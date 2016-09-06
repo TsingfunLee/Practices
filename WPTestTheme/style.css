@@ -1,4 +1,8 @@
-﻿        .div1{
+﻿::selection{
+    color: #fff;
+    background-color: #d9534f;
+}
+        .div1{
             width: 100px;
             height: 2000px;
             background-color: #66afe9;

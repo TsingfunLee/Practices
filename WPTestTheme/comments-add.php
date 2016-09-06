@@ -1,4 +1,5 @@
 <?php
+$directory=get_template_directory_uri();
     $title_reply='
             <div class="title_reply youwel">
             <i class="icon icon-pencil"></i>
@@ -24,16 +25,16 @@
             </div>
         </div>
 		   <div class="argue-gif">
-            <a href="javascript:;"><img src="img/gif/bei.gif" alt="悲" title="悲"/></a>
-            <a href="javascript:;"><img src="img/gif/bizui.gif" alt="闭嘴" title="闭嘴"/></a>
-            <a href="javascript:;"><img src="<?php echo get_template_directory_uri(); ?>/img/gif/chan.gif"  alt="馋" title="馋"/></a>
-            <a href="javascript:;"><img src="<?php echo get_template_directory_uri(); ?>/img/gif/chi.gif"  alt="吃" title="吃"/></a>
-            <a href="javascript:;"><img src="<?php echo get_template_directory_uri(); ?>/img/gif/cry.gif"  alt="哭" title="哭"/></a>
-            <a href="javascript:;"><img src="<?php echo get_template_directory_uri(); ?>/img/gif/han.gif"  alt="汗" title="汗"/></a>
-            <a href="javascript:;"><img src="<?php echo get_template_directory_uri(); ?>/img/gif/hei.gif"  alt="嘿" title="嘿"/></a>
-            <a href="javascript:;"><img src="<?php echo get_template_directory_uri(); ?>/img/gif/jian.gif"  alt="贱" title="贱"/></a>
-            <a href="javascript:;"><img src="<?php echo get_template_directory_uri(); ?>/img/gif/jing.gif"  alt="惊" title="惊"/></a>
-            <a href="javascript:;"><img src="<?php echo get_template_directory_uri(); ?>/img/gif/jiong.gif"  alt="囧" title="囧"/></a>
+            <a href="javascript:;"><img src="'."$directory".'/img/gif/bei.gif" alt="悲" title="悲"/></a>
+            <a href="javascript:;"><img src="'."$directory".'/img/gif/bizui.gif" alt="闭嘴" title="闭嘴"/></a>
+            <a href="javascript:;"><img src="'."$directory".'/img/gif/chan.gif" alt="馋" title="馋"/></a>
+            <a href="javascript:;"><img src="'."$directory".'/img/gif/chi.gif"  alt="吃" title="吃"/></a>
+            <a href="javascript:;"><img src="'."$directory".'/img/gif/cry.gif"  alt="哭" title="哭"/></a>
+            <a href="javascript:;"><img src="'."$directory".'/img/gif/han.gif"  alt="汗" title="汗"/></a>
+            <a href="javascript:;"><img src="'."$directory".'/img/gif/hei.gif"  alt="嘿" title="嘿"/></a>
+            <a href="javascript:;"><img src="'."$directory".'/img/gif/jian.gif"  alt="贱" title="贱"/></a>
+            <a href="javascript:;"><img src="'."$directory".'/img/gif/jing.gif"  alt="惊" title="惊"/></a>
+            <a href="javascript:;"><img src="'."$directory".'/img/gif/jiong.gif"  alt="囧" title="囧"/></a>
        
         </div>';
     $array = array(

@@ -73,28 +73,28 @@ function test_get_date()
 /**
  * Get Part Of The Content
  */
-//function excerpt($limit) {
-//    $excerpt = explode(' ', get_the_excerpt(), $limit);
-//    if (count($excerpt)>=$limit) {
-//        array_pop($excerpt);
-//        $excerpt = implode(" ",$excerpt).'...';
-//    } else {
-//        $excerpt = implode(" ",$excerpt);
-//    }
-//    $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
-//    return $excerpt;
-//}
-//function test_get_preview($content)
-//{
-//    // Take the existing content and return a subset of it
-//    return substr($content, 0, 300);
-//}
-//function test_get_content($id, $words = 300)
-//{
-//    $content = the_content('...',true);
-//    $content = substr($content, 0, $words);
-//    return $content;
-//}
+function test_excerpt( $length=300, $more = '&hellip;', $echo = true ){
+    static $excerpt_length, $excerpt_more;
+
+    $current_filter = current_filter();
+    if( $current_filter == 'excerpt_length' ) return $excerpt_length;
+    if( $current_filter == 'excerpt_more'   ) return $excerpt_more;
+
+    $excerpt_length = $length;
+    $excerpt_more   = $more;
+
+    $callable = __FUNCTION__;
+    add_filter( 'excerpt_length', $callable, 18 );
+    add_filter( 'excerpt_more',   $callable, 18 );
+
+    $excerpt = $echo ? the_excerpt() : get_the_excerpt();
+
+    remove_filter( 'excerpt_length', $callable, 18 );
+    remove_filter( 'excerpt_more',   $callable, 18 );
+
+    unset( $excerpt_length, $excerpt_more );
+    return $excerpt;
+}
 
 /**
  * Get The Number Of Posts

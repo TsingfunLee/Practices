@@ -72,7 +72,7 @@
                 if (is_single()) {
                     the_content();
                 } else {
-                    the_excerpt();
+                    test_excerpt();
                 }
                 ?>
             </p>

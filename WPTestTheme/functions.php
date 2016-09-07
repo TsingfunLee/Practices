@@ -172,12 +172,17 @@ function skt_girlie_pagination() {
 /**
  * Comment Emotion
  */
+remove_action('init', 'smilies_init', 5);
+add_action('init', 'test_smilies', 5);
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('admin_print_scripts', 'print_emoji_detection_script');
+remove_action('wp_print_styles', 'print_emoji_styles');
+remove_action('admin_print_styles', 'print_emoji_styles');
 function test_smilies() {
     global $wpsmiliestrans;
     $wpsmiliestrans = array(
         ':neutral:' => "\xf0\x9f\x98\x90",
         ':twisted:' => "\xf0\x9f\x98\x88",
-        ':arrow:' => "\xe2\x9e\xa1",
         ':shock:' => "\xf0\x9f\x98\xaf",
         ':smile:' => "\xf0\x9f\x99\x82",
         ':???:' => "\xf0\x9f\x98\x95",
@@ -187,38 +192,13 @@ function test_smilies() {
         ':idea:' => "\xf0\x9f\x92\xa1",
         ':oops:' => "\xf0\x9f\x98\xb3",
         ':razz:' => "\xf0\x9f\x98\x9b",
-        ':roll:' => "\xf0\x9f\x99\x84",
+        //':roll:' => "\xf0\x9f\x99\x84",
         ':wink:' => "\xf0\x9f\x98\x89",
         ':cry:' => "\xf0\x9f\x98\xa5",
         ':eek:' => "\xf0\x9f\x98\xae",
         ':lol:' => "\xf0\x9f\x98\x86",
         ':mad:' => "\xf0\x9f\x98\xa1",
         ':sad:' => "\xf0\x9f\x99\x81",
-        '8-)' => "\xf0\x9f\x98\x8e",
-        '8-O' => "\xf0\x9f\x98\xaf",
-        ':-(' => "\xf0\x9f\x99\x81",
-        ':-)' => "\xf0\x9f\x99\x82",
-        ':-?' => "\xf0\x9f\x98\x95",
-        ':-D' => "\xf0\x9f\x98\x80",
-        ':-P' => "\xf0\x9f\x98\x9b",
-        ':-o' => "\xf0\x9f\x98\xae",
-        ':-x' => "\xf0\x9f\x98\xa1",
-        ':-|' => "\xf0\x9f\x98\x90",
-        ';-)' => "\xf0\x9f\x98\x89",
-        // This one transformation breaks regular text with frequency.
-        //     '8)' => "\xf0\x9f\x98\x8e",
-        '8O' => "\xf0\x9f\x98\xaf",
-        ':(' => "\xf0\x9f\x99\x81",
-        ':)' => "\xf0\x9f\x99\x82",
-        ':?' => "\xf0\x9f\x98\x95",
-        ':D' => "\xf0\x9f\x98\x80",
-        ':P' => "\xf0\x9f\x98\x9b",
-        ':o' => "\xf0\x9f\x98\xae",
-        ':x' => "\xf0\x9f\x98\xa1",
-        ':|' => "\xf0\x9f\x98\x90",
-        ';)' => "\xf0\x9f\x98\x89",
-        ':!:' => "\xe2\x9d\x97",
-        ':?:' => "\xe2\x9d\x93",
     );
     if ( !get_option('use_smilies') or (empty($wpsmiliestrans))) return;
     $smilies = array_unique($wpsmiliestrans);

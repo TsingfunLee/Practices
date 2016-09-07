@@ -32,7 +32,7 @@
         'logged_in_as' => '',
         'comment_notes_before' => "$comment_before",
         'comment_notes_after' => '',
-        'id_form' => 'comment',
+        'id_form' => '',
         'id_submit' => 'submit',
         'title_reply' => "$title_reply",
         'title_reply_to' => __(''),

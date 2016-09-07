@@ -25,6 +25,7 @@
     <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-2.2.2.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
 	 <script src="<?php echo get_template_directory_uri(); ?>/js/mymove.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/readMore.js"></script>
     <script>
         $('#navTabs a').click(function (e) {
             e.preventDefault();

@@ -14,9 +14,8 @@
                     <h1>很抱歉，没有找到任何内容。</h1>
                 </article>
             <?php } ?>
-            <button class="test-more">加载更多</button>
             <?php
-            skt_girlie_pagination();
+            test_pagination();
             ?>
         </div>
         <?php get_sidebar(); ?>

@@ -10,7 +10,6 @@
 
     <?php if (have_comments()) : ?>
         <ul class='comment'>
-		
             <?php
             wp_list_comments(array(
                 'style' => 'ul',

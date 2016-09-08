@@ -147,7 +147,7 @@ function test_get_recommend_posts(){
 /*
  * Load More
  */
-function skt_girlie_pagination() {
+function test_pagination() {
     /*Set this function for pagination links*/
     global $wp_query;
     $big = 12345678;

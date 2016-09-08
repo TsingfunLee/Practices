@@ -34,18 +34,18 @@
             </span>
             <?php } ?>
             <!-- Tags -->
-            <span class="post-tag-tags label label-danger  mylabel">
             <?php
             $posttags = get_the_tags();
             if ($posttags) { ?>
+                <span class="post-tag-tags label label-danger  mylabel">
                 <i class="icon-tags icon-large"></i>
                 <?php
                 foreach ($posttags as $tag) {
                     echo "$tag->name";
-                }
-            }
-            ?>
-        </span>
+                } ?>
+                </span>
+            <?php }?>
+
             <!-- Author -->
             <span class="post-author label label-danger  mylabel">
             <i class="icon-user icon-large"></i>

@@ -15,7 +15,7 @@ get_header();?>
 			<p><span>email:</span> zhoujiangbohai@163.com</p>
 		</div>
 
-		<?php get_template_part('comments');?>
+		<?php comments_template(); ?>
 	</div>
 	
 	<?php get_sidebar(); ?>

@@ -23,8 +23,8 @@
                     <input type="text" id="url" name="url" placeholder="*网站" value="" tabindex="3"/>
                 </p>
             </div>
-        </div>'."$smiles".'
-        <textarea class="youtext arguearea" id="comment" name="comment" cols="95″ rows="40″ aria-required="true" placeholder="赶快发表你的见解吧！"></textarea>
+        </div> <div class="argue-gif">'."$smiles".'
+        </div><div class="arguearea"><textarea class="youtext" id="comment" name="comment" cols="95″ rows="40″ aria-required="true" placeholder="赶快发表你的见解吧！"></textarea></div>
     ';
     $comment_before = "$smiles";
     $array = array(

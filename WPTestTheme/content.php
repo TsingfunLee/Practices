@@ -38,11 +38,12 @@
             $posttags = get_the_tags();
             if ($posttags) { ?>
                 <span class="post-tag-tags label label-danger  mylabel">
-                <i class="icon-tags icon-large"></i>
+                <a href=" "><i class="icon-tags icon-large"></i>
                 <?php
                 foreach ($posttags as $tag) {
                     echo "$tag->name";
                 } ?>
+				</a>
                 </span>
             <?php }?>
 
@@ -95,12 +96,12 @@
         <?php
         if (get_previous_post()) {
             echo '<div  class="btn btn-primary btn-before">';
-            previous_post_link('%link', '上一篇');
+            previous_post_link('%link', '<div>上一篇</div>');
             echo '</div>';
         }
         if (get_next_post()){
-            echo '<div  class="btn btn-primary btn-before">';
-            next_post_link('%link', '下一篇');
+            echo '<div  class="btn btn-primary btn-after">';
+            next_post_link('%link', '<span>下一篇</span>');
             echo '</div>';
         }
         ?>

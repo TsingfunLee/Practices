@@ -13,9 +13,12 @@
             $href=get_permalink($recent['ID']). '"title="Look'.esc_attr($recent["post_title"]);
             ?>
 				
-					<a href="<?php echo $href ?>" class='list-group-item'><?php echo $recent['post_title']; ?>
-						<span class="badge"><?php echo test_get_post_views($recent['ID']); ?></span>
+					<a href="<?php echo $href ?>" class='list-group-item'>
+					<span class="badge"><?php echo test_get_post_views($recent['ID']); ?></span>
+						
+						<?php echo $recent['post_title']; ?>
 					</a>
+					
 				
 			
 		

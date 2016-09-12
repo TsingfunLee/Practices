@@ -66,12 +66,27 @@ window.onload=function(){
     var argI=argHide.getElementsByTagName('i')[0];
     myhidef(argHide,argI,isargSilder,argCon);
 	
-	var isnewSilder=true;
-    var newCon=document.getElementById('newcon');
-    var newHide=document.getElementById('newhide');
-    var newI=newHide.getElementsByTagName('i')[0];
-    myhidef(newHide,newI,isnewSilder,newCon);
-	
+ 
+    if(document.getElementById('newcon')) {
+        var isnewSilder = true;
+        var newCon = document.getElementById('newcon');
+        var newHide = document.getElementById('newhide');
+        var newI = newHide.getElementsByTagName('i')[0];
+        myhidef(newHide, newI, isnewSilder, newCon);
+    }
+    if(document.getElementsByClassName('avatar')) {
+        var rotateImg = document.getElementsByClassName('avatar');
+        for (var i = 0; i < rotateImg.length; i++) {
+            rotateImg[i].onmouseover = function () {
+                $(this).css('transition', '0.6s');
+                $(this).css('transform', 'rotate(360deg)');
+            }
+            rotateImg[i].onmouseout = function () {
+                $(this).css('transition', '0.6s');
+                $(this).css('transform', 'rotate(0deg)');
+            }
+        }
+    }
 }
 function myhidef(myHide,ospan,istrue,ccon) {
     $(myHide).click(function () {

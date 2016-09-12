@@ -160,7 +160,7 @@ function test_pagination() {
     ) );
     if( is_array($page_format) ) {
         $paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
-        echo '<div class="pagination"><div><ul>';
+        echo '<div class="pagination"><div><ul class="page-devider">';
         echo '<li><span>'. $paged . ' of ' . $wp_query->max_num_pages .'</span></li>';
         foreach ( $page_format as $page ) {
             echo "<li>$page</li>";

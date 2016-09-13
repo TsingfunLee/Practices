@@ -1,4 +1,4 @@
-<div class="col-md-4" role="complementary">
+<div class="col-md-4 hidden-xs hidden-sm" role="complementary">
 
     <?php
     if (is_single()||is_page()){

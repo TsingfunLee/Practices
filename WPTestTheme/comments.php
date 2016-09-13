@@ -13,6 +13,8 @@
             <?php
             wp_list_comments(array(
                 'style' => 'ul',
+                'callback'=>'',
+                'type'=>'comment',
                 'short_ping' => true,
                 'avatar_size' => 70,
             ));

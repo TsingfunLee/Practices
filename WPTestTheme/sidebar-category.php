@@ -12,7 +12,7 @@
                 <!-- Categories -->
                 <div role="tabpanel" class="tab-pane fade in active catemain-color" id="category">
                     <ul class="li-panel">
-                <?php wp_list_cats('sort_column=name&hierarchical=0'); ?>
+                <?php wp_list_categories('title_li=&sort_column=name&hierarchical=0'); ?>
            </ul>
                 </div>
                 <!-- Hot Tags -->

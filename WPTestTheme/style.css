@@ -484,7 +484,7 @@ footer p,footer a{
     line-height: 22px;
 }
 .catemain-color * {
-    color:#2c3340 !important;
+    color:#2c3340;
 }
 .pane-color ul li a{
     color:#2c3340 !important;

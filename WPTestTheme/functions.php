@@ -288,5 +288,21 @@ function test_smilies()
 
 //}
 
+/**
+ * Colorful Tag Cloud
+ */
+function test_colorCloud($text) {
+    $text = preg_replace_callback('|<a (.+?)>|i', 'test_colorCloudCallback', $text);
+    return $text;
+}
+function test_colorCloudCallback($matches) {
+    $text = $matches[1];
+    $color = dechex(rand(0,16777215));
+    $pattern = '/style=(\'|\")(.*)(\'|\")/i';
+    $text = preg_replace($pattern, "style=\"color:#{$color};$2;\"", $text);
+    return "<a $text>";
+}
+add_filter('wp_tag_cloud', 'test_colorCloud', 1);
+
 ?>
 

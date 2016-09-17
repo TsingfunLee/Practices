@@ -24,7 +24,7 @@
 
     <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-2.2.2.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
-	 <script src="<?php echo get_template_directory_uri(); ?>/js/mymove.js"></script>
+	 <script src="<?php echo get_template_directory_uri(); ?>/js/mainMove.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/readMore.js"></script>
     <script>
         $('#navTabs a').click(function (e) {
@@ -32,25 +32,6 @@
             $(this).tab('show');
         });
     </script>
-	<script>
-    $('input').focus(function(){
-        $(this).css('outline','none');//answer1
-    })
-	$('a').focus(function(){
-        $(this).css('outline','none');//answer1
-    })
-	$('p').focus(function(){
-        $(this).css('color','red');//answer1
-    })
-    $('textarea').focusin(function(){
-        $(this).css('outline','none');
-        $(this).css( "border", "none" );
-        $(this).css( "border", "2px solid #d9534f" );
-    })
-    $('textarea').focusout(function(){
-        $(this).css( "border", "none" );
-        $(this).css( "border", "2px solid #C1C1C1" );
-    })
-	</script>
+
 </body>
 </html>

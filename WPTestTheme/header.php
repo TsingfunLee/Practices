@@ -36,7 +36,7 @@
                     </button>
                     <a class="navbar-brand  myfont-white" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
 					<div class="header-tack"><i class="icon icon-pushpin"></i></div>
-					<a  class="static-btn" href="javascript:;" id="static"></a>
+					<a  class="static-btn tack-none" href="javascript:;" id="static"></a>
 				</div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->

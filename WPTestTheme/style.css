@@ -1,37 +1,97 @@
-﻿body{
-    overflow-x:hidden;
-}
+﻿/**
+ * Created by Liu(前端) on 2016/08/09-2016/09/16.
+ */
 
-.div1{
-    width: 100px;
-    height: 2000px;
-    background-color: #66afe9;
-}
+/* ——本网页界面设计引用Alex's Blog界面，只做交流学习，不用于商业用途，侵删改——*/
+
+/* ————————————————————————预设————————————*/
 body{
-    background-color: #BCE8F1;
+    overflow-x:hidden;
     font-family: 微软雅黑;
     font-size: 14px;
+    padding-top: 70px;
+    background:url("img/bg.jpg") repeat;
 }
 a,a:hover{
     text-decoration: none;
 }
+ul li{
+    list-style-type:none;
+}
+*::selection{
+    background-color: #d9534f;
+    color:white;
+}
+*::-moz-selection{
+    background-color: #d9534f;
+    color:white;
+}
+*::-webkit-selection{
+    background-color: #d9534f;
+    color:white;
+}
+/*————————————————————————预设结束————————————*/
+
+/*————————————————————————头部————————————*/
+#static{
+    position: absolute;
+    top:17px;
+    right: 60px;
+    width: 22px;
+    height: 22px;
+    overflow: hidden;
+}
+/*类名用于js更换样式*/
+.tack-red{
+    background: url("img/red.png")no-repeat -22px 0 ;
+}
+.tack-none{
+    background: url("img/red.png")no-repeat 0 0 ;
+}
+/*类名用于js更换样式结束*/
+
+.header-tack{
+    position: absolute;
+    top:17px;
+    right: 80px;
+    color:white;
+    width:22px;
+    height:22px;
+}
+#header-btn{
+    color: white;
+    list-style: none;
+}
+.menu-about *{
+    list-style-type:none;
+    color:white;
+    font-weight:700;
+    background-color: #3D4450;
+    text-align:center;
+    padding-left:6px;
+    padding-right:6px;
+    padding-top:5px;
+    padding-bottom:1px;
+}
+.menu-about .header-btn *{
+    background-color: inherit;
+}
+.menu-about *:hover{
+    color:white;
+    background-color:#2c3340;
+}
+.navbar-brand{
+    margin-right: 40px;
+}
+/*————————————————————————头部结束————————————*/
+
+/*————————————————————————主体左侧————————————*/
 h2 a{
     color:#3d4450 ;
     font-family: "微软雅黑";
 }
 h2 a:hover,.btn-before,.btn-before:hover,.btn-after,.btn-after:hover{
     color:#d9534f ;
-}
-body{
-    padding-top: 70px;
-    background:url("img/bg.jpg") repeat;
-}
-.myright i:hover{
-    cursor:pointer;
-}
-.myright{
-    padding-right: 30px;
-    padding-left: 20px;
 }
 .mywidth{
     border-radius: 15px;
@@ -133,7 +193,6 @@ body{
 }
 .art-single h2{
     color: #d9534f;
-
 }
 .art-single a{
     margin-top: 12px;
@@ -158,61 +217,6 @@ body{
     line-height: 30px;
     color: white;
     text-decoration: none;
-}
-footer{
-    height: 120px;
-    background-color: #3d4450;
-}
-footer a{
-    text-decoration: none;
-}
-footer a:hover{
-    text-decoration: none;
-    color: white;
-}
-footer p,footer a{
-    color: white;;
-    padding-top: 30px;
-    line-height: 22px;
-    text-align: center;
-    font-size: 13px;
-}
-#static{
-    position: absolute;
-    top:17px;
-    right: 60px;
-    width: 22px;
-    height: 22px;
-    overflow: hidden;
-    background: url("img/red.png")no-repeat 0 0;
-}
-.header-tack{
-    position: absolute;
-    top:17px;
-    right: 80px;
-    color:white;
-    width:22px;
-    height:22px;
-}
-.list-group .active,.list-group .active:hover,.mynav-color{
-    border-color: #3d4450;
-    background-color:#3d4450 ;
-}
-.mynav-color{
-    height: 50px;
-    margin-top: -70px;
-    background-color:#3d4450 ;
-    border-radius: 0px;
-    border: 1px solid #3d4450;
-}
-.badge{
-    background-color:#d9534f ;
-}
-.myfont-white{
-    color: white;
-}
-.myfont-red{
-    color: #d9534f !important;
 }
 .col-md-8{
     padding-top: 17px;
@@ -357,6 +361,138 @@ footer p,footer a{
     float: right;
     margin-right: 30px;
 }
+.comment {
+    padding:0;
+}
+.comment li{
+    margin: 10px;
+    position: relative;
+    list-style: none;
+    background-color: white;
+    border: 1px solid #EEEEEE;
+}
+.comment li .vcard {
+    background-color: #F1F5F8;
+    height: 37px;
+    margin: 1px;
+    padding-left: 50px;
+    line-height: 37px;
+}
+.comment li .vcard img{
+    position: absolute;
+    left: -36px;
+    top: 18px;
+    border-radius: 40px;
+    overflow: hidden;
+    width: 70px;
+    height: 70px;
+    border: 3px solid white;
+}
+.comment .comment-meta{
+    float:right;
+    margin-right: 10px;
+    font-weight: 600;
+    position: relative;
+    right: 10px;
+    top:-30px;
+}
+.comment li p{
+    padding: 30px 20px 30px 50px;
+    word-break: break-all;
+    line-height:22px;
+}
+.comment li a{
+    color: black;
+}
+.comment cite{
+    font-style: normal;
+    font-weight: 600;
+}
+.comment-meta a:hover,.comment cite:hover,.reply a:hover{
+    color: #d9534f;
+    cursor: pointer;
+}
+.reply a{
+    position: absolute;
+    right: 20px;
+    bottom: 7px;
+}
+.page-devider{
+    margin-bottom:50px;
+}
+.page-devider li{
+    list-style: none;
+    margin: 1px 13px;
+    display: inline;
+}
+.page-devider li a, .page-devider li span{
+    float: left;
+    padding: 5px 10px;
+    margin: 1px 3px;
+    height: 40px;
+    border: 1px solid #AAAAAA;
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    line-height: 30px;
+}
+.page-devider a:hover{
+    cursor: pointer;
+    color: white !important;
+}
+.page-devider li:hover,.page-devider li span{
+    color: white !important;
+}
+.page-devider li a:hover,.page-devider li span{
+    background-color: #d9534f;
+}
+.current{
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.gutter{
+    width:90px;
+    word-break:keep-all;
+}
+table.code{
+    padding:0;
+}
+table.code.container{
+    margin:0;
+}
+.post-tag a{
+    color: inherit;
+}
+/*————————————————————————主体左侧结束————————————*/
+
+/*————————————————————————主体右侧————————————*/
+.myright i:hover{
+    cursor:pointer;
+}
+.myright{
+    padding-right: 30px;
+    padding-left: 20px;
+}
+.list-group .active,.list-group .active:hover,.mynav-color{
+    border-color: #3d4450;
+    background-color:#3d4450 ;
+}
+.mynav-color{
+    height: 50px;
+    margin-top: -70px;
+    background-color:#3d4450 ;
+    border-radius: 0px;
+    border: 1px solid #3d4450;
+}
+.badge{
+    background-color:#d9534f ;
+}
+.myfont-white{
+    color: white;
+}
+.myfont-red{
+    color: #d9534f !important;
+}
 .sing-ad{
     margin-left: 80px;
 }
@@ -391,19 +527,12 @@ footer p,footer a{
     width: 75%;
     margin: 5px 10px;
     color: #666666;
-
-    /*只显示一行*/
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
 }
-.post-title,#newcon a.list-group-item ,#hotcon a.list-group-item,#rancon a.list-group-item{
-
+.argue-con,.post-title,#newcon a.list-group-item ,#hotcon a.list-group-item,#rancon a.list-group-item{
     /*只显示一行*/
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-
 }
 #newcon .list-group-item,#hotcon .list-group-item,#rancon .list-group-item {
     padding-right:45px !important;
@@ -413,7 +542,6 @@ footer p,footer a{
     position:absolute;
     right:12px;
 }
-
 .post-title span{
     margin:20px;
 }
@@ -441,25 +569,11 @@ footer p,footer a{
 #sidebar-adcon .ad-one p{
     padding-top: 10px;
 }
-.about-me{
-    border-radius: 15px;
-    border: 1px solid #bce8f1;
-    background-color: #d9edf7;
-    color: #3a87ad;
-    font-family: '微软雅黑';
-    padding:15px;
+#sidebar-adcon .ad-one .imgbox{
+    margin:3px;
 }
-.about-me h2{
-    font-size: 26px;
-    font-weight: 700;
-}
-.about-me h3,.about-me span{
-    font-size: 17px;
-    font-weight: 600;
-}
-#header-btn{
-    color: white;
-    list-style: none;
+#sidebar-adcon .ad-one .imgbox img{
+    width:100%;
 }
 .sidebar-cate{
     margin-right: 30px;
@@ -496,183 +610,86 @@ footer p,footer a{
 .changeco li a{
     color: black !important;
 }
-.menu-about *{
-    list-style-type:none;
-    color:white;
-    font-weight:700;
-    background-color: #3D4450;
-    text-align:center;
-    padding-left:6px;
-    padding-right:6px;
-    padding-top:5px;
-    padding-bottom:1px;
+/*————————————————————————主体右侧结束————————————*/
 
+/*————————————————————————about-me页面————————————*/
+.about-me{
+    border-radius: 15px;
+    border: 1px solid #bce8f1;
+    background-color: #d9edf7;
+    color: #3a87ad;
+    font-family: '微软雅黑';
+    padding:15px;
 }
-.menu-about .header-btn *{
-  background-color: inherit;
+.about-me h2{
+    font-size: 26px;
+    font-weight: 700;
 }
-.menu-about *:hover{
-    color:white;
-    background-color:#2c3340;
-}
-.navbar-brand{
-    margin-right: 40px;
-}
-.comment {
-    padding:0;
-}
-.comment ul{
-
-}
-.comment li{
-    margin: 10px;
-    position: relative;
-    list-style: none;
-    background-color: white;
-    border: 1px solid #EEEEEE;
-
-
-
-}
-
-/*.comment li .auther-img:hover{*/
-/*transition: 0.6s;*/
-/*transform: rotate(360deg);*/
-/*}*/
-.comment li .vcard {
-    background-color: #F1F5F8;
-    height: 37px;
-    margin: 1px;
-    padding-left: 50px;
-    line-height: 37px;
-}
-.comment li .vcard img{
-    position: absolute;
-    left: -36px;
-    top: 18px;
-    border-radius: 40px;
-    overflow: hidden;
-    width: 70px;
-    height: 70px;
-    border: 3px solid white;
-
-}
-.comment .comment-meta{
-    float:right;
-    margin-right: 10px;
+.about-me h3,.about-me span{
+    font-size: 17px;
     font-weight: 600;
-    position: relative;
-    right: 10px;
-    top:-30px;
 }
-.comment li p{
-    padding: 30px 20px 30px 50px;
-    word-break: break-all;
-    line-height:22px;
-}
-.comment li a{
-    color: black;
-}
-.comment cite{
-    font-style: normal;
-    font-weight: 600;
+/*————————————————————————about-me页面结束————————————*/
 
+/*————————————————————————底部版权区————————————*/
+footer{
+    height: 120px;
+    background-color: #3d4450;
 }
-.comment-meta a:hover,.comment cite:hover,.reply a:hover{
+footer a{
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: none;
+    color: white;
+}
+footer p,footer a{
+    color: white;;
+    padding-top: 30px;
+    line-height: 22px;
+    text-align: center;
+    font-size: 13px;
+}
+/*————————————————————————底部版权区结束————————————*/
 
-    color: #d9534f;
-    cursor: pointer;
-}
-.reply a{
-    position: absolute;
-    right: 20px;
-    bottom: 7px;
-}
-.page-devider{
-    margin-bottom:50px;
-}
-.page-devider li{
-    list-style: none;
-    margin: 1px 13px;
-    display: inline;
-}
-
-.page-devider li a, .page-devider li span{
-    float: left;
-    padding: 5px 10px;
-    margin: 1px 3px;
-    height: 40px;
-    border: 1px solid #AAAAAA;
-    background-color: white;
-    border-radius: 5px;
-    color: black;
-    line-height: 30px;
-}
-.page-devider a:hover{
-    cursor: pointer;
-    color: white !important;
-}
-.page-devider li:hover,.page-devider li span{
-    color: white !important;
-}
-.page-devider li a:hover,.page-devider li span{
-    background-color: #d9534f;
-}
-.current{
-    padding: 5px 15px;
-    border-radius: 5px;
-}
-.gutter{
-    width:90px;
-    word-break:keep-all;
-}
-table.code{
-    padding:0;
-}
-table.code.container{
-    margin:0;
-
-}
-.post-tag a{
-    color: inherit;
-}
+/*————————————————————————响应式————————————*/
 @media (max-width: 991px) {
     .youmes .mes-span {
         top: 0;
     }
 }
 @media (max-width: 780px){
+    .header-about{
+        border-radius: 20px;
+        margin-top: -10px;
+    }
     .myhui-right{
         width: 80%;
         margin-top: -15px;
         align: center;
     }
-.page-devider li a.page-numbers,.page-devider li span{
-display:none;
-}
-.page-devider li{
-position:relative;
-}
-.page-devider li a{
-	margin:2px;
-
-}
-.page-devider li a.prev{
-display:inline;
-position:absolute;
-top:10px;
-left:-35px;
-width:80px;
-}
-.page-devider li a.next{
-display:inline;
-position:absolute;
-top:10px;
-left:0px;
-width:80px;
-}
-    .divdate,.sing-ad{
-        display: none;
+    .page-devider li a.page-numbers,.page-devider li span,.divdate,.sing-ad,.comment-meta{
+        display:none;
+    }
+    .page-devider li{
+        position:relative;
+    }
+    .page-devider li a{
+        margin:2px;
+    }
+    .page-devider li a.prev{
+        display:inline;
+        position:absolute;
+        top:10px;
+        left:-35px;
+        width:80px;
+    }
+    .page-devider li a.next{
+        display:inline;
+        position:absolute;
+        top:10px;
+        left:0px;
+        width:80px;
     }
     .btn-after{
         margin-right:0px;
@@ -698,7 +715,7 @@ width:80px;
         margin: 0 30px;
     }
     .myright{
-        margin-left: 10px;
+        margin-left: 10px;h
     }
     .you-love-art{
         margin: 5px;
@@ -721,14 +738,10 @@ width:80px;
     .argue-con {
         width: 72%;
     }
-    .header-about{
-        border-radius: 20px;
-        margin-top: -10px;
-    }
-    .comment-meta{
-        display:none;
-    }
 }
+/*————————————————————————响应式结束————————————*/
+
+/*————————————————————————回到顶部————————————*/
 #gotoTop{
     display:none;
     width: 46px;
@@ -737,13 +750,13 @@ width:80px;
     border: 2px solid white;
     position:fixed;
     top:93%;
-    left:50%;
+    right:8%;
     cursor:pointer;
     margin-top:-50px;
     margin-left:520px;
     border-radius: 25px;
-    /*line-height: 36px;*/
-    background:#3d4450;}
+    background:#3d4450;
+}
 #gotoTop i{
     position: absolute;
     top: 6px;
@@ -752,10 +765,18 @@ width:80px;
 /*用CSS表达式(expression)来实现ie6下position:fixed效果*/
 #gotoTop{
     _position:absolute;
-    _top:expression(documentElement.scrollTop + documentElement.clientHeight * 3/4 + "px")}
+    _top:expression(documentElement.scrollTop + documentElement.clientHeight * 3/4 + "px")
+}
 /*鼠标进入的反馈效果*/
 #gotoTop.hover{
     border: 2px solid #d9534f;
     color:#d9534f;
     text-decoration:none;
 }
+/*————————————————————————回到顶部结束————————————*/
+
+
+
+
+
+

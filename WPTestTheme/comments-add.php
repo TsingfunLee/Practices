@@ -9,18 +9,18 @@
         <div class="row youmes">
            <div class="col-md-4">
                 <p class="mes-sing"><span class="mes-span addwidth"><i class="icon icon-user icon-large"></i></span>
-                    <input type="text" id="author" name="author" placeholder="*昵称" value="" tabindex="1"/>
+                    <input type="text" id="author" name="author" placeholder="*昵称" value="" tabindex="1" title="昵称(必填)"/>
                 </p>
             </div>
 
             <div class="col-md-4">
                 <p  class="mes-sing"><span class="mes-span"><i class="icon icon-envelope"></i></span>
-                    <input type="text" id="email" name="email" placeholder="*邮箱" value="" tabindex="2"/>
+                    <input type="text" id="email" name="email" placeholder="*邮箱" value="" tabindex="2"  title="邮箱(必填)"/>
                 </p>
             </div>
             <div class="col-md-4">
                 <p  class="mes-sing"><span class="mes-span"><i class="icon icon-link"></i></span>
-                    <input type="text" id="url" name="url" placeholder="*网站" value="" tabindex="3"/>
+                    <input type="text" id="url" name="url" placeholder="*网站" value="" tabindex="3" title="网站"/>
                 </p>
             </div>
         </div> <div class="argue-gif">'."$smiles".'

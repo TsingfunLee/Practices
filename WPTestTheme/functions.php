@@ -36,7 +36,7 @@ function test_set_post_views($postID)
  */
 function test_site_views()
 {
-    global $wpdb;
+    //global $wpdb;
     //链接数据库
     //$conn=mysqli_connect("localhost","wordpress","123456");
     //if(!$conn){
@@ -45,16 +45,16 @@ function test_site_views()
     //选择数据库
     //mysqli_select_db($conn,"wordpress") or die(mysqli_errno());
     //从数据库中获取访问数
-    $sql = "select * from db_stats";
-    $views = $wpdb->get_var($sql);
-    $views++;
+    //$sql = "select * from db_stats";
+    //$views = $wpdb->get_var($sql);
+    //$views++;
     //$row=mysqli_fetch_row($res);
     //$row[0]++;
     //将访客数添加到数据库中
-    $sql = "insert into db_stats ";
-    $wpdb->query($sql);
+    //$sql = "insert into db_stats ";
+    //$wpdb->query($sql);
     //mysqli_query($conn,$sql);
-    echo "$views";
+    //echo "$views";
 }
 
 /**

@@ -5,9 +5,26 @@ canvas.height = window.innerHeight;
 
 // 绘制动画
 var angle = -90;
+var wavePoint = 0;
 animation.start(15);
 animation.animate(function() {
 	if(angle <= 270){
+		// 计算绘制波浪曲线的点
+//		loading.x = window.innerWidth/2 +100;
+//		loading.y = -loading.percentage/100+ window.innerHeight/2+100; 
+//		loading.xs = loading.x - 200;
+//		loading.ys = loading.y;
+//		loading.xc = loading.x - wavePoint;
+//		loading.yc = loading.y;
+//		loading.cp1x = (loading.xs + loading.xc)/2;
+//		loading.cp1y = loading.y - loading.waveH;
+//		loading.cp2x = (loading.xc + loading.x)/2;
+//		loading.cp2y = loading.y + loading.waveH;
+//		wavePoint +=5;
+//		if(wavePoint > 199){
+//			wavePoint = 0;
+//		}
+		
 		loading.draw(ctx, Math.PI / 180 * angle);
 		angle += 8;
 	}else{

@@ -15,7 +15,7 @@ animation.animate(function() {
 		ctx.font = '300px Sans-serif';
 		ctx.textBaseline = 'middle';
 		ctx.textAlign = 'center';
-		ctx.fillText('咪咕圈圈', window.innerWidth/2, window.innerHeight/2);	
+		ctx.fillText('TSing', window.innerWidth/2, window.innerHeight/2);	
 		
 		
 		var img = ctx.getImageData(0, 0, window.innerWidth, window.innerHeight);
@@ -44,12 +44,27 @@ animation.animate(function() {
 			var startPosY = Math.random()*window.innerHeight;
 			
 			particle.x = Math.easeInOutExpo(animation.process*animation.interval/1000, 
-				startPosX, particles[i][0]-startPosX, 5);
+				startPosX, particles[i][0]-startPosX, 8);
 			particle.y = Math.easeInOutExpo(animation.process*animation.interval/1000, 
-				startPosY, particles[i][1]-startPosY, 5);		
+				startPosY, particles[i][1]-startPosY, 8);
+				
+			var distance = Math.sqrt((particle.x-particle.mouseX)*(particle.x-particle.mouseX)+(particle.y-particle.mouseY)*(particle.y-particle.mouseY));
+			if(distance<50){
+//				particle.x=Math.easeInOutExpo(animation.process*animation.interval/1000, 
+//				particle.mouseX, particles[i][0]-particle.mouseX, 5);
+//				particle.y=Math.easeInOutExpo(animation.process*animation.interval/1000, 
+//				particle.mouseY, particles[i][0]-particle.mouseY, 5);
+				var newX = particle.mouseX + (Math.random()-0.5)*100;
+				var newY = particle.mouseY + (Math.random()-0.5)*100;
+				distance = Math.sqrt((newX-particle.mouseX)*(newX-particle.mouseX)+(newY-particle.mouseY)*(newY-particle.mouseY));
+				if(distance < 50){
+					particle.x = newX;
+					particle.y = newY;
+				}
+			}
 			
 			// 计算半径
-			var distance = Math.sqrt((particle.mouseX - particle.x)*(particle.mouseX - particle.x)+(particle.mouseY-particle.y)*(particle.mouseY-particle.y));
+			distance = Math.sqrt((particle.mouseX - particle.x)*(particle.mouseX - particle.x)+(particle.mouseY-particle.y)*(particle.mouseY-particle.y));
 			var scale = 1;
 			if(distance < 20){
 				scale = 1.8;

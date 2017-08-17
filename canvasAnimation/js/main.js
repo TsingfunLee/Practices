@@ -5,36 +5,46 @@ canvas.height = window.innerHeight;
 
 // 绘制动画
 var angle = -90;
-var wavePoint = 0;
+var wavePoint = -loading.radius;
+var waveDir = 'ltr';
+var delta = 8;
+var PorN = 1;   // 变正负
 animation.start(15);
+ctx.save();
 animation.animate(function() {
 	if(angle <= 270){
-		// 计算绘制波浪曲线的点
-//		loading.x = window.innerWidth/2 +100;
-//		loading.y = -loading.percentage/100+ window.innerHeight/2+100; 
-//		loading.xs = loading.x - 200;
-//		loading.ys = loading.y;
-//		loading.xc = loading.x - wavePoint;
-//		loading.yc = loading.y;
-//		loading.cp1x = (loading.xs + loading.xc)/2;
-//		loading.cp1y = loading.y - loading.waveH;
-//		loading.cp2x = (loading.xc + loading.x)/2;
-//		loading.cp2y = loading.y + loading.waveH;
-//		wavePoint +=5;
-//		if(wavePoint > 199){
-//			wavePoint = 0;
-//		}
+		// 计算绘制波浪曲线的点		
+		loading.x = window.innerWidth/2 + loading.radius + loading.width;
+		var yTemp = -loading.percentage * 2 + window.innerHeight/2 + loading.radius + loading.width;
+		loading.y = yTemp; 
+		loading.xs = loading.x - loading.radius * 2 - loading.width * 2;
+		loading.ys = yTemp;
+		loading.cp1x = window.innerWidth/2 + wavePoint;
+		loading.cp1y = loading.y - loading.waveH;
+		loading.cp2x = loading.cp1x;
+		loading.cp2y = loading.y + loading.waveH;
+		if(waveDir == 'ltr'){
+			wavePoint += 15;
+		}else{
+			wavePoint -= 20;
+		}
+		if(wavePoint >= loading.radius){
+			waveDir = 'rtl';
+		}else if(wavePoint <= -loading.radius){
+			waveDir = 'ltr';
+		}
 		
 		loading.draw(ctx, Math.PI / 180 * angle);
-		angle += 8;
+		angle += delta;
 	}else{
+		ctx.restore();
+
 		ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
 		ctx.font = '300px Sans-serif';
 		ctx.textBaseline = 'middle';
 		ctx.textAlign = 'center';
 		ctx.fillText('TSing', window.innerWidth/2, window.innerHeight/2);	
-		
-		
+			
 		var img = ctx.getImageData(0, 0, window.innerWidth, window.innerHeight);
 		var data = img.data;
 		var particles = [];
@@ -102,7 +112,7 @@ animation.animate(function() {
 
 // 鼠标滑过事件
 var mouseoverEvent = function(e) {
-	console.log(e.clientX)
+	//console.log(e.clientX)
 	particle.mouseX = e.clientX;
 	particle.mouseY = e.clientY;
 	particle.draw(ctx);

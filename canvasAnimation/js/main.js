@@ -17,7 +17,7 @@ animation.animate(function() {
 		loading.x = window.innerWidth/2 + loading.radius + loading.width;
 		var yTemp = -loading.percentage * 2 + window.innerHeight/2 + loading.radius + loading.width;
 		loading.y = yTemp; 
-		loading.xs = loading.x - loading.radius * 2 - loading.width * 2;
+		loading.xs = loading.x - loading.radius * 2 - loading.width*2;
 		loading.ys = yTemp;
 		loading.cp1x = window.innerWidth/2 + wavePoint;
 		loading.cp1y = loading.y - loading.waveH;

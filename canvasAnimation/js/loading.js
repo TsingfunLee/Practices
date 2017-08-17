@@ -23,8 +23,19 @@ var loading = {
 		
 		ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
 		ctx.arc(x, y, this.radius + this.width / 2, 0, Math.PI * 2, false);
-		ctx.clip();
+		ctx.clip();	
 		
+		// 波浪
+		ctx.beginPath();
+		ctx.moveTo(this.xs, this.ys);
+		ctx.bezierCurveTo(this.cp1x, this.cp1y, this.cp2x, this.cp2y, this.x, this.y);
+		ctx.lineTo(this.x, window.innerHeight/2 + this.radius + this.width);
+		ctx.lineTo(this.xs, window.innerHeight/2 + this.radius + this.width);
+		ctx.closePath();
+		ctx.fillStyle = this.color;		
+		ctx.fill();		
+							
+		// 圆圈
 		ctx.beginPath();
 		ctx.arc(x, y, this.radius, 
 			this.startAngle, this.endAngle, false);
@@ -34,18 +45,20 @@ var loading = {
 		ctx.lineWidth = this.width;
 		ctx.stroke();
 		
+		// 白色圆圈
 		ctx.beginPath();
-		ctx.moveTo(this.xs, this.ys);
-		ctx.bezierCurveTo(this.cp1x, this.cp1y, this.cp2x, this.cp2y, this.x, this.y);
-		ctx.lineTo(this.x, window.innerHeight/2 + this.radius + this.width);
-		ctx.lineTo(this.xs, window.innerHeight/2 + this.radius + this.width);
-		ctx.closePath();
-		ctx.fillStyle = this.color;
-		ctx.fill();				
+		ctx.arc(x, y, this.radius - this.width/2, 0, Math.PI * 2, false);
+		ctx.strokeStyle = '#fff';
+		ctx.lineWidth = 2;
+		ctx.stroke();
 		
+		// 文字
 		ctx.font = '80px serif';
 		ctx.textBaseline = 'middle';
 		ctx.textAlign = 'center';
-		ctx.fillText(this.percentage, x, y);	
+		ctx.fillStyle = '#fff799';
+		ctx.fillText(this.percentage + '%', x, y);
+		
+		
 	}
 }

@@ -11,6 +11,8 @@ body{
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
+/* 中间的页面 */
 .page{
 	background-image: url(../img/page.png);
 	width: 69.8vw;
@@ -19,7 +21,7 @@ body{
     background-color: #fff;
     border-radius: 25px;
     margin: 0 auto;
-    box-shadow: 0 0 50px #fff;
+    /*box-shadow: 0 0 50px #fff;*/
     position: relative;
     top: 20vh;
 }
@@ -37,6 +39,21 @@ body{
 	right: 0;
 }
 
+/* 下拉圆形  */
+.dropDown{
+	width: 100%;
+	height: 25vh;
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateY(-50%);
+	opacity: 0.75;
+	border-radius: 100%;
+	display: none;
+}
+
+/* 灰机 */
 .plane{
 	background-image: url(../img/plane.png);
     background-repeat: no-repeat;
@@ -50,10 +67,12 @@ body{
     display: none;
 }
 
+/* 引导提示 */
 .tip{
 	position: absolute;
 	top: 0;
 	left: 0;
+	opacity: 0;
 }
 .dot{
 	position: absolute;
@@ -89,6 +108,92 @@ body{
 	left: 30vw;
     display: inline-block;   
 }
+/* 向左滑动  */
+.dot2 {
+	top: 22vh;
+	left: 75vw;
+}
+.arrow2 {
+	top: 10vh;
+	left: 75vw;
+}
+.tipText2{
+}
+/* 再向右滑动 */
+.dot3{
+	top: 40vh;
+    left: 20vw;
+
+}
+.arrow3{
+	top: 45vh;
+    left: 20vw;
+    transform: rotateX(0);
+}
+.tipText3{
+	top: 40vh;
+}
+/* 滑动飞机 */
+.dot4{
+	top: 68vh;
+	left: 50vw;
+}
+.arrow4{
+	top: 75vh;
+	left: 50vw;
+	transform: rotateX(0);
+}
+.tipText4{
+	top: 72vh;
+    left: 16vw;
+}
+/* 下拉开启 */
+.dot5{
+	top: 9vh;
+    left: 50vw;
+    transform: translateX(-50%);
+}
+.arrow5{
+	top: 21vh;
+    left: 40vw;
+}
+.tipText5{
+	top: 12vh;
+    left: 38vw;
+}
+
+/* 动效 */
+.flipOver {
+	transition: all 1s ease-in;
+	transform: rotate3d(-1, 1, 0, 180deg);
+}
+.flipOver2 {
+	transition: all 1s ease-in;
+	transform: rotate3d(1, 1, 0, 180deg);
+}
+.fadeIn {
+	animation-name: fadeIn;
+	animation-duration: 1s;
+	animation-delay: .3s;
+	animation-fill-mode: both;
+}
+.fadeOut {
+	animation-name: fadeOut;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+.fly {
+	animation-name: fly;
+	animation-duration: 1.5s;
+	animation-fill-mode: both;
+	animation-timing-function: ease-in-out;
+}
+.pullDown{
+	animation-name: pullDown;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-timing-function: ease-out;
+}
 
 @keyframes bling {
 	0%{
@@ -102,5 +207,52 @@ body{
 	100%{
 		box-shadow: 0px 0px 0px 3px #b8f145;
 		opacity: 0.8;
+	}
+}
+
+@keyframes fadeIn {
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	from{
+		opacity: 1;
+	}
+	to{
+		opacity: 0;
+	}
+}
+
+@keyframes fly {
+	0%{
+		
+	}
+	75%{
+		transform: scale(0.4, 0.4) translate(70vw, -60vh) rotate3d(0, 0, 0, 0);
+	}
+	76%{
+		transform: scale(0.4, 0.4) translate(70vw, -60vh) rotate3d(0, 1, 0, 180deg);
+	}
+	90%{
+		opacity: 1;
+	}
+	95%{
+		transform: scale(0.4, 0.4) translate(0, -80vh) rotate3d(0, 1, 0, 180deg);
+		opacity: 0.75;
+	}
+	100%{
+		transform: scale(0.4, 0.4) translate(0, -80vh) rotate3d(0, 1, 0, 180deg);
+		opacity: 0;
+	}
+}
+
+@keyframes pullDown{
+	to{
+		height: 55vh;
 	}
 }

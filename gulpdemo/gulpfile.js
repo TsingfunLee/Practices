@@ -6,8 +6,9 @@ var spritesmith = require('gulp.spritesmith');
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
-            baseDir: "./",
-        }
+            baseDir: "./"
+        },
+        port: 8080
     });
     
     gulp.watch('css/*.css', ['css']);

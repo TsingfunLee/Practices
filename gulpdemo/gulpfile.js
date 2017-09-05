@@ -19,7 +19,7 @@ gulp.task('browser-sync', function() {
 // 将CSS注入浏览器实现实时更新
 gulp.task('css', function() {
     return gulp.src("css/*css")
-        .pipe(reload({stream: true}));
+        .pipe(browserSync.reload({stream: true}));
 });
 
 // 合并雪碧图

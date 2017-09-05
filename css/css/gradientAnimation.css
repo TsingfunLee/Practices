@@ -1,0 +1,305 @@
+@keyframes gradient {
+  0% {
+    background: linear-gradient(100deg, #e9defa -10%, #fbfcdb 10%);
+  }
+  1% {
+    background: linear-gradient(100deg, #e9defa -9%, #fbfcdb 11%);
+  }
+  2% {
+    background: linear-gradient(100deg, #e9defa -8%, #fbfcdb 12%);
+  }
+  3% {
+    background: linear-gradient(100deg, #e9defa -7%, #fbfcdb 13%);
+  }
+  4% {
+    background: linear-gradient(100deg, #e9defa -6%, #fbfcdb 14%);
+  }
+  5% {
+    background: linear-gradient(100deg, #e9defa -5%, #fbfcdb 15%);
+  }
+  6% {
+    background: linear-gradient(100deg, #e9defa -4%, #fbfcdb 16%);
+  }
+  7% {
+    background: linear-gradient(100deg, #e9defa -3%, #fbfcdb 17%);
+  }
+  8% {
+    background: linear-gradient(100deg, #e9defa -2%, #fbfcdb 18%);
+  }
+  9% {
+    background: linear-gradient(100deg, #e9defa -1%, #fbfcdb 19%);
+  }
+  10% {
+    background: linear-gradient(100deg, #e9defa 0%, #fbfcdb 20%);
+  }
+  11% {
+    background: linear-gradient(100deg, #e9defa 1%, #fbfcdb 21%);
+  }
+  12% {
+    background: linear-gradient(100deg, #e9defa 2%, #fbfcdb 22%);
+  }
+  13% {
+    background: linear-gradient(100deg, #e9defa 3%, #fbfcdb 23%);
+  }
+  14% {
+    background: linear-gradient(100deg, #e9defa 4%, #fbfcdb 24%);
+  }
+  15% {
+    background: linear-gradient(100deg, #e9defa 5%, #fbfcdb 25%);
+  }
+  16% {
+    background: linear-gradient(100deg, #e9defa 6%, #fbfcdb 26%);
+  }
+  17% {
+    background: linear-gradient(100deg, #e9defa 7%, #fbfcdb 27%);
+  }
+  18% {
+    background: linear-gradient(100deg, #e9defa 8%, #fbfcdb 28%);
+  }
+  19% {
+    background: linear-gradient(100deg, #e9defa 9%, #fbfcdb 29%);
+  }
+  20% {
+    background: linear-gradient(100deg, #e9defa 10%, #fbfcdb 30%);
+  }
+  21% {
+    background: linear-gradient(100deg, #e9defa 11%, #fbfcdb 31%);
+  }
+  22% {
+    background: linear-gradient(100deg, #e9defa 12%, #fbfcdb 32%);
+  }
+  23% {
+    background: linear-gradient(100deg, #e9defa 13%, #fbfcdb 33%);
+  }
+  24% {
+    background: linear-gradient(100deg, #e9defa 14%, #fbfcdb 34%);
+  }
+  25% {
+    background: linear-gradient(100deg, #e9defa 15%, #fbfcdb 35%);
+  }
+  26% {
+    background: linear-gradient(100deg, #e9defa 16%, #fbfcdb 36%);
+  }
+  27% {
+    background: linear-gradient(100deg, #e9defa 17%, #fbfcdb 37%);
+  }
+  28% {
+    background: linear-gradient(100deg, #e9defa 18%, #fbfcdb 38%);
+  }
+  29% {
+    background: linear-gradient(100deg, #e9defa 19%, #fbfcdb 39%);
+  }
+  30% {
+    background: linear-gradient(100deg, #e9defa 20%, #fbfcdb 40%);
+  }
+  31% {
+    background: linear-gradient(100deg, #e9defa 21%, #fbfcdb 41%);
+  }
+  32% {
+    background: linear-gradient(100deg, #e9defa 22%, #fbfcdb 42%);
+  }
+  33% {
+    background: linear-gradient(100deg, #e9defa 23%, #fbfcdb 43%);
+  }
+  34% {
+    background: linear-gradient(100deg, #e9defa 24%, #fbfcdb 44%);
+  }
+  35% {
+    background: linear-gradient(100deg, #e9defa 25%, #fbfcdb 45%);
+  }
+  36% {
+    background: linear-gradient(100deg, #e9defa 26%, #fbfcdb 46%);
+  }
+  37% {
+    background: linear-gradient(100deg, #e9defa 27%, #fbfcdb 47%);
+  }
+  38% {
+    background: linear-gradient(100deg, #e9defa 28%, #fbfcdb 48%);
+  }
+  39% {
+    background: linear-gradient(100deg, #e9defa 29%, #fbfcdb 49%);
+  }
+  40% {
+    background: linear-gradient(100deg, #e9defa 30%, #fbfcdb 50%);
+  }
+  41% {
+    background: linear-gradient(100deg, #e9defa 31%, #fbfcdb 51%);
+  }
+  42% {
+    background: linear-gradient(100deg, #e9defa 32%, #fbfcdb 52%);
+  }
+  43% {
+    background: linear-gradient(100deg, #e9defa 33%, #fbfcdb 53%);
+  }
+  44% {
+    background: linear-gradient(100deg, #e9defa 34%, #fbfcdb 54%);
+  }
+  45% {
+    background: linear-gradient(100deg, #e9defa 35%, #fbfcdb 55%);
+  }
+  46% {
+    background: linear-gradient(100deg, #e9defa 36%, #fbfcdb 56%);
+  }
+  47% {
+    background: linear-gradient(100deg, #e9defa 37%, #fbfcdb 57%);
+  }
+  48% {
+    background: linear-gradient(100deg, #e9defa 38%, #fbfcdb 58%);
+  }
+  49% {
+    background: linear-gradient(100deg, #e9defa 39%, #fbfcdb 59%);
+  }
+  50% {
+    background: linear-gradient(100deg, #e9defa 40%, #fbfcdb 60%);
+  }
+  51% {
+    background: linear-gradient(100deg, #e9defa 41%, #fbfcdb 61%);
+  }
+  52% {
+    background: linear-gradient(100deg, #e9defa 42%, #fbfcdb 62%);
+  }
+  53% {
+    background: linear-gradient(100deg, #e9defa 43%, #fbfcdb 63%);
+  }
+  54% {
+    background: linear-gradient(100deg, #e9defa 44%, #fbfcdb 64%);
+  }
+  55% {
+    background: linear-gradient(100deg, #e9defa 45%, #fbfcdb 65%);
+  }
+  56% {
+    background: linear-gradient(100deg, #e9defa 46%, #fbfcdb 66%);
+  }
+  57% {
+    background: linear-gradient(100deg, #e9defa 47%, #fbfcdb 67%);
+  }
+  58% {
+    background: linear-gradient(100deg, #e9defa 48%, #fbfcdb 68%);
+  }
+  59% {
+    background: linear-gradient(100deg, #e9defa 49%, #fbfcdb 69%);
+  }
+  60% {
+    background: linear-gradient(100deg, #e9defa 50%, #fbfcdb 70%);
+  }
+  61% {
+    background: linear-gradient(100deg, #e9defa 51%, #fbfcdb 71%);
+  }
+  62% {
+    background: linear-gradient(100deg, #e9defa 52%, #fbfcdb 72%);
+  }
+  63% {
+    background: linear-gradient(100deg, #e9defa 53%, #fbfcdb 73%);
+  }
+  64% {
+    background: linear-gradient(100deg, #e9defa 54%, #fbfcdb 74%);
+  }
+  65% {
+    background: linear-gradient(100deg, #e9defa 55%, #fbfcdb 75%);
+  }
+  66% {
+    background: linear-gradient(100deg, #e9defa 56%, #fbfcdb 76%);
+  }
+  67% {
+    background: linear-gradient(100deg, #e9defa 57%, #fbfcdb 77%);
+  }
+  68% {
+    background: linear-gradient(100deg, #e9defa 58%, #fbfcdb 78%);
+  }
+  69% {
+    background: linear-gradient(100deg, #e9defa 59%, #fbfcdb 79%);
+  }
+  70% {
+    background: linear-gradient(100deg, #e9defa 60%, #fbfcdb 80%);
+  }
+  71% {
+    background: linear-gradient(100deg, #e9defa 61%, #fbfcdb 81%);
+  }
+  72% {
+    background: linear-gradient(100deg, #e9defa 62%, #fbfcdb 82%);
+  }
+  73% {
+    background: linear-gradient(100deg, #e9defa 63%, #fbfcdb 83%);
+  }
+  74% {
+    background: linear-gradient(100deg, #e9defa 64%, #fbfcdb 84%);
+  }
+  75% {
+    background: linear-gradient(100deg, #e9defa 65%, #fbfcdb 85%);
+  }
+  76% {
+    background: linear-gradient(100deg, #e9defa 66%, #fbfcdb 86%);
+  }
+  77% {
+    background: linear-gradient(100deg, #e9defa 67%, #fbfcdb 87%);
+  }
+  78% {
+    background: linear-gradient(100deg, #e9defa 68%, #fbfcdb 88%);
+  }
+  79% {
+    background: linear-gradient(100deg, #e9defa 69%, #fbfcdb 89%);
+  }
+  80% {
+    background: linear-gradient(100deg, #e9defa 70%, #fbfcdb 90%);
+  }
+  81% {
+    background: linear-gradient(100deg, #e9defa 71%, #fbfcdb 91%);
+  }
+  82% {
+    background: linear-gradient(100deg, #e9defa 72%, #fbfcdb 92%);
+  }
+  83% {
+    background: linear-gradient(100deg, #e9defa 73%, #fbfcdb 93%);
+  }
+  84% {
+    background: linear-gradient(100deg, #e9defa 74%, #fbfcdb 94%);
+  }
+  85% {
+    background: linear-gradient(100deg, #e9defa 75%, #fbfcdb 95%);
+  }
+  86% {
+    background: linear-gradient(100deg, #e9defa 76%, #fbfcdb 96%);
+  }
+  87% {
+    background: linear-gradient(100deg, #e9defa 77%, #fbfcdb 97%);
+  }
+  88% {
+    background: linear-gradient(100deg, #e9defa 78%, #fbfcdb 98%);
+  }
+  89% {
+    background: linear-gradient(100deg, #e9defa 79%, #fbfcdb 99%);
+  }
+  90% {
+    background: linear-gradient(100deg, #e9defa 80%, #fbfcdb 100%);
+  }
+  91% {
+    background: linear-gradient(100deg, #e9defa 81%, #fbfcdb 101%);
+  }
+  92% {
+    background: linear-gradient(100deg, #e9defa 82%, #fbfcdb 102%);
+  }
+  93% {
+    background: linear-gradient(100deg, #e9defa 83%, #fbfcdb 103%);
+  }
+  94% {
+    background: linear-gradient(100deg, #e9defa 84%, #fbfcdb 104%);
+  }
+  95% {
+    background: linear-gradient(100deg, #e9defa 85%, #fbfcdb 105%);
+  }
+  96% {
+    background: linear-gradient(100deg, #e9defa 86%, #fbfcdb 106%);
+  }
+  97% {
+    background: linear-gradient(100deg, #e9defa 87%, #fbfcdb 107%);
+  }
+  98% {
+    background: linear-gradient(100deg, #e9defa 88%, #fbfcdb 108%);
+  }
+  99% {
+    background: linear-gradient(100deg, #e9defa 89%, #fbfcdb 109%);
+  }
+  100% {
+    background: linear-gradient(100deg, #e9defa 90%, #fbfcdb 110%);
+  }
+}

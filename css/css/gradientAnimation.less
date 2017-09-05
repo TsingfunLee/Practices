@@ -1,0 +1,38 @@
+//@counter: 0;
+@colorBegin: #e9defa;
+//@colorCenter: white;
+@colorStop: #fbfcdb;
+
+.gradient();
+.loop(@counter)when(@counter<=100%){   
+    @{counter}{
+        background: linear-gradient(100deg, @colorBegin -10%+@counter, @colorStop 10%+@counter);
+    } 
+    .loop((@counter+1%));
+}
+//.loop2(@counter)when(@counter<=60%){  
+//  @{counter}{
+//      background: linear-gradient(90deg, @colorStop -20%+@counter, @colorBegin 0%+@counter, @colorCenter 40%+@counter);
+//  } 
+//  .loop2((@counter+1%));
+//}
+//.loop3(@counter)when(@counter<=100%){   
+//  @{counter}{
+//      background: linear-gradient(90deg, @colorCenter -60%+@counter, @colorStop -20%+@counter, @colorBegin 0%+@counter);
+//  }
+//  .loop3((@counter+1%));
+//}
+
+.gradient(){
+    @keyframes gradient{
+        .loop(0%);
+//    .loop2(21%);
+//      .loop3(61%);
+//      from{
+//      background: linear-gradient(90deg, #2578b5 20%, white 60%, #90caaf 100%);
+//      }
+//      10%{
+//          background: linear-gradient(90deg, #2578b5 30%, white 70%, #90caaf 10%);
+//      } 
+    }
+}

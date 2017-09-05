@@ -13,9 +13,8 @@ h1{
 	margin: 0 auto;
 	width: 3em;
 	height: 1.32em;
-/*	background: linear-gradient(90deg, #f6f3ff 0%, #cd9cf2 20%);*/
 	animation-name: gradient;
-	animation-duration: 5s;
+	animation-duration: 4s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 	animation-direction: alternate;
@@ -37,12 +36,52 @@ ul{
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: space-between;
-	padding: 0.3em 0.5em;
+	padding: 1em 1em;
 	margin: 0 auto;
 	list-style: none;
 	font-size: 0.5em;
 }
 
+li{
+	background-color: #494fa3;
+	color: white;
+	padding: .1em 1.2em;
+}
+
+.hover1{
+	transition: all 1s; 	
+	outline: solid white 2px;
+}
+
 .hover1:hover{
-	
+	outline: solid #494fa3 2px;
+	outline-offset: -8px;
+	background-color: white;
+	color: #494fa3;
+}
+
+.hover2{
+	position: relative;	
+}
+
+.hover2::after{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	transition-property: all;
+	transition-duration: 1s;
+	transition-timing-function: ease-out;
+}
+
+.hover2:hover::after{
+	width: 0%;
+	height: 100%;
+	background-color: white;
+	opacity: 0.5;
+	border-bottom-right-radius: .76em;
+	border-top-right-radius: .76em;
 }

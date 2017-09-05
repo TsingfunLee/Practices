@@ -4,16 +4,15 @@
   "description": "CSS DEMO",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/TsingfunLee/Practices.git"
   },
   "author": {
-    "name": "",
-    "email": ""
+    "name": "@TsingfunLee",
+    "email": "liluodaye@gmail.com"
   },
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "browser-sync": "2.18.13",
-    "gulp": "^3.9.1",
-    "gulp.spritesmith": "^6.5.1"
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1"
   }
 }

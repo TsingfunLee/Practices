@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no,email=no" />
+		<title>TodoList</title>
+
+		<style>
+			body,
+			ol {
+				padding: 0;
+				margin: 0;
+			}
+			
+			li {
+				list-style: none;
+			}
+			
+			.panelBox {
+				padding-left: 15px;
+				padding-right: 15px;
+				min-width: 320px;
+				box-sizing: border-box;
+			}
+			
+			.panel {
+				border: solid #cccccc 1px;
+				border-radius: 10px;
+			}
+			
+			.item {
+				border-top: solid #CCCCCC 1px;
+				width: 100%;
+				height: 60px;
+				padding-left: 20px;
+				padding-right: 20px;
+				line-height: 60px;
+				box-sizing: border-box;
+			}
+			
+			.item:first-child {
+				border: none;
+			}
+			
+			.gray {
+				color: #CCCCCC;
+			}
+			
+			.right {
+				float: right;
+				margin-left: 10px;
+				position: relative;
+				top: 15px;
+			}
+			
+			.btn {
+				display: inline-block;
+				padding: 6px 12px;
+				margin-bottom: 0;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 1.42857143;
+				text-align: center;
+				white-space: nowrap;
+				vertical-align: middle;
+				-ms-touch-action: manipulation;
+				touch-action: manipulation;
+				cursor: pointer;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				background-image: none;
+				border: 1px solid transparent;
+				border-radius: 4px;
+			}
+			
+			.btn-blue {
+				color: #fff;
+				background-color: #337ab7;
+				border-color: #2e6da4;
+			}
+			
+			.btn-green {
+				color: #fff;
+				background-color: #5cb85c;
+				border-color: #4cae4c;
+			}
+			
+			.btn-red {
+				color: #fff;
+				background-color: #d9534f;
+				border-color: #d43f3a;
+			}
+			
+			.input {
+				/*display: block;
+				width: 100%;
+				height: 34px;*/
+				width: 11em;
+				padding: 6px 12px;
+				font-size: 14px;
+				line-height: 1.42857143;
+				color: #555;
+				background-color: #fff;
+				background-image: none;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+				-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+				box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+				-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+				-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+				transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+			}
+			
+			.input::-webkit-input-placeholder {
+				color: #CCCCCC;
+			}
+			
+			.deleteInput {
+				display: inline-block;
+				color: #cccccc;
+				position: absolute;
+				left: 12em;
+			}
+			
+			.deleteInput:hover {
+				color: black;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="todoList" class="panelBox">
+			<h1>您的待办事项</h1>
+			<div class="panel">
+				<ol>
+					<li v-if="!todoItems.length" class="item gray">真棒~所有任务都完成了！</li>
+					<li v-for="item in todoItems" class="item">
+						{{(todoItems.getIndexByValue(item) + 1) + '.' + item}}
+						<button @click="finishItem(item)" class="btn btn-green right">完成</button>
+						<button @click="deleteItem(item)" class="btn btn-red right">删除</button>
+					</li>
+				</ol>
+				<div id="addNew" class="item">
+					<a class="deleteInput" @click="deleteInput" v-show="!!newItem">×</a>
+					<input class="input" name="newItemInput" maxlength="11" v-model="newItem" v-on:focus="inputFocus()" placeholder="请输入待办事项" />
+					<button @click="addNewItem()" class="btn btn-blue right">新增</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="finishedList" class="panelBox">
+			<h1>已完成的事项</h1>
+			<ol class="panel">
+				<li class="item gray" v-if="!finishedItems.length">全部完成就去吃大餐~</li>
+				<li class="item" v-for="item in finishedItems">
+					{{(finishedItems.getIndexByValue(item) + 1) + '.' + item}}
+				</li>
+			</ol>
+		</div>
+
+		<script src="js/lib/vue.js"></script>
+		<script>
+			Array.prototype.removeByValue = function(val) {
+				for(var i = 0; i < this.length; i++) {
+					if(this[i] == val) {
+						this.splice(i, 1)
+						break
+					}
+				}
+			}
+
+			Array.prototype.getIndexByValue = function(val) {
+				for(var i = 0; i < this.length; i++) {
+					if(this[i] == val) {
+						return i
+					}
+				}
+			}
+
+			var todoList = new Vue({
+				el: '#todoList',
+				data: {
+					todoItems: [],
+					newItem: ''
+				},
+				methods: {
+					addNewItem: function() {
+						this.todoItems.push(this.newItem)
+					},
+					finishItem: function(item) {
+						this.todoItems.removeByValue(item)
+						finishedList.finishedItems.push(item)
+					},
+					deleteItem: function(item) {
+						this.todoItems.removeByValue(item)
+					},
+					deleteInput: function() {
+						this.newItem = '';
+					},
+					inputFocus: function() {
+						var input = document.getElementsByClassName('input')[0];
+						input.setAttribute('placeholder', '');
+					}
+				}
+			})
+
+			var finishedList = new Vue({
+				el: '#finishedList',
+				data: {
+					finishedItems: []
+				},
+				methods: {
+
+				}
+			})
+		</script>
+	</body>
+
+</html>
